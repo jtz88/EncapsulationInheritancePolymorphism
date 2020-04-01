@@ -24,11 +24,11 @@ namespace EncapsulationInheritancePolymorphism
             //Console.WriteLine(person.Age);
 
             PersonHandler ph = new PersonHandler();
-            Gubbe person = ph.CreatePerson(45, "John", "Smith", 1.87, 88.5);
+            Person person = ph.CreatePerson(45, "John", "Smith", 1.87, 88.5);
             Console.WriteLine($"{person.Age}, {person.Fname}, {person.Lname}, {person.Height}, {person.Weight}");
 
             //PersonHandler ph2 = new PersonHandler();
-            Gubbe person2 = ph.CreatePerson(45, "John", "Smith");
+            Person person2 = ph.CreatePerson(45, "John", "Smith");
             Console.WriteLine($"{person2.Age}, {person2.Fname}, {person2.Lname}");
 
             //bool result;
@@ -76,8 +76,17 @@ namespace EncapsulationInheritancePolymorphism
 
             foreach (var animal in animals)
             {
-                if (animal == dog)
+               // Console.WriteLine(animal.Bark());
+                if (animal is Dog ddd)
                 {
+                    //Unsafecast exeption
+                    var d = (Dog)animal;
+                    //Safe cast null
+                    var dd = animal as Dog;
+                    Console.WriteLine(d.Bark());
+                    dd.Bark();
+                    ddd.Bark();
+
                     Console.WriteLine(dog.Stats());
                 }
             }

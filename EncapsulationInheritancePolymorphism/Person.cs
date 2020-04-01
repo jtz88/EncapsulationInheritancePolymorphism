@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EncapsulationInheritancePolymorphism
 {
-    public class Gubbe
+    public class Person
     {
 		private int age;
 		private string fName;
@@ -15,7 +15,7 @@ namespace EncapsulationInheritancePolymorphism
 		private double weight;
 
 		//Här kan man overloada constructor med olika signaturer (beteenden)
-		public Gubbe(int age, string fname, string lname, double height, double weight)
+		public Person(int age, string fname, string lname, double height, double weight)
 		{
 			Age = age;
 			Fname = fname;
@@ -25,14 +25,14 @@ namespace EncapsulationInheritancePolymorphism
 		}
 
 		//Constructor med en annan signatur (beteende)
-		public Gubbe(int age, string fname, string lname)
+		public Person(int age, string fname, string lname)
 		{
 			Age = age;
 			Fname = fname;
 			Lname = lname;
 		}
 
-		public Gubbe()
+		public Person()
 		{
 		}
 

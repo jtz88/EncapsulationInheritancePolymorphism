@@ -8,13 +8,13 @@ namespace EncapsulationInheritancePolymorphism
 {
     public class PersonHandler 
     {
-        public void SetAge(Gubbe pers, int age)
+        public void SetAge(Person pers, int age)
         {
             pers.Age = age;
         }
 
         //Metod som returnerar en Person
-        public Gubbe CreatePerson(int age, string fname, string lname, double height, double weight)
+        public Person CreatePerson(int age, string fname, string lname, double height, double weight)
         {
             //1.
             //Person person = new Person();
@@ -30,15 +30,15 @@ namespace EncapsulationInheritancePolymorphism
             //Kommer att använda default constructor
 
             //3.
-            return new Gubbe(age, fname, lname, height, weight);
+            return new Person(age, fname, lname, height, weight);
             //Returnerar till en constructor
             
         }
 
         //Metod som returnerar en Person
-        public Gubbe CreatePerson(int age, string fname, string lname)
+        public Person CreatePerson(int age, string fname, string lname)
         {
-            return new Gubbe(age, fname, lname);
+            return new Person(age, fname, lname);
         }
     }
 }

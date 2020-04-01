@@ -13,8 +13,7 @@ namespace EncapsulationInheritancePolymorphism
         {
             HasLeash = hasleash;
         }
-        public override string Stats() => $"Dog has {Name}, {Weight}, {Age}, {Sound}, {HasLeash}";
-
+        public override string Stats() => $"{base.Stats()} Dog has leash? Answer: {HasLeash}";
         public string Bark() => "WOFFFSSSS!";
 
     }

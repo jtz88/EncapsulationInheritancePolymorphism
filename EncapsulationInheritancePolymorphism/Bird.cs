@@ -16,7 +16,11 @@ namespace EncapsulationInheritancePolymorphism
             WingSpan = wingSpan;
         }
 
-        public override string Stats() => $"Bird has {Name}, {Weight}, {Age}, {Sound}, {WingSpan}";
+        public override string Stats() => $"{base.Stats()} Bird has, {WingSpan}";
+
+       // public override string Stats() => base.Stats() + "Bird has, " + WingSpan;
+
+
 
         //public Bird()
         //  {
